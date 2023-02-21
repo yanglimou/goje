@@ -2,9 +2,9 @@ package com.example.demo.mapper;
 
 import com.example.demo.entity.User;
 import com.example.demo.entity.UserQueryParam;
+import com.example.demo.entity.UserVo;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * 访问user表的mapper
@@ -25,5 +25,5 @@ public interface UserMapper {
 
     int getPageCount(UserQueryParam userQueryParam);
 
-    List<User> getPage(UserQueryParam userQueryParam);
+    List<UserVo> getPage(UserQueryParam userQueryParam);
 }

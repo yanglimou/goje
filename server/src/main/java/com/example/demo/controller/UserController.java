@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.User;
 import com.example.demo.entity.UserQueryParam;
+import com.example.demo.entity.UserVo;
 import com.example.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,7 @@ public class UserController {
         // 1. 查询总条数
         int total = userMapper.getPageCount(userQueryParam);
         // 2. 查询分页数据
-        List<User> users = userMapper.getPage(userQueryParam);
+        List<UserVo> users = userMapper.getPage(userQueryParam);
         Map map = new HashMap();
         map.put("total", total);
         map.put("data", users);
